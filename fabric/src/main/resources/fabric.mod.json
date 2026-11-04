@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${description}",
+  "authors": ["${mod_author}"],
+  "contributors": ["Vazkii (original author)", "maxpowa (1.6.4 maintainer)"],
+  "contact": {
+    "homepage": "https://hangel.dev/"
+  },
+  "license": "${license}",
+  "icon": "assets/tukmc/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.hangel.tukmc.TukMCFabric"],
+    "modmenu": ["dev.hangel.tukmc.compat.ModMenuCompat"]
+  },
+  "mixins": ["${mod_id}.fabric.mixins.json"],
+  "accessWidener": "${mod_id}.accesswidener",
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=${java_version}",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}

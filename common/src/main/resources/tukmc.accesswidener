@@ -1,0 +1,25 @@
+accessWidener v2 named
+
+# Chat: TukMC draws the vanilla message list itself
+accessible field net/minecraft/client/gui/components/ChatComponent trimmedMessages Ljava/util/List;
+accessible field net/minecraft/client/gui/components/ChatComponent chatScrollbarPos I
+accessible field net/minecraft/client/gui/screens/ChatScreen commandSuggestions Lnet/minecraft/client/gui/components/CommandSuggestions;
+accessible field net/minecraft/client/gui/screens/ChatScreen initial Ljava/lang/String;
+
+# Record display ("Now Playing")
+accessible field net/minecraft/client/gui/Gui overlayMessageString Lnet/minecraft/network/chat/Component;
+accessible field net/minecraft/client/gui/Gui overlayMessageTime I
+accessible field net/minecraft/client/gui/Gui animateOverlayMessageColor Z
+
+# Boss bars
+accessible field net/minecraft/client/gui/Gui bossOverlay Lnet/minecraft/client/gui/components/BossHealthOverlay;
+accessible field net/minecraft/client/gui/components/BossHealthOverlay events Ljava/util/Map;
+
+# Vanilla HUD pieces TukMC falls back to (no GUI layer API on Fabric 1.21.1)
+accessible method net/minecraft/client/gui/Gui renderExperienceBar (Lnet/minecraft/client/gui/GuiGraphics;I)V
+accessible method net/minecraft/client/gui/Gui renderPlayerHealth (Lnet/minecraft/client/gui/GuiGraphics;)V
+accessible method net/minecraft/client/gui/Gui renderVehicleHealth (Lnet/minecraft/client/gui/GuiGraphics;)V
+accessible method net/minecraft/client/gui/Gui isExperienceBarVisible ()Z
+
+# GuiChat draws its own widgets (protected on NeoForge)
+accessible field net/minecraft/client/gui/screens/Screen renderables Ljava/util/List;
